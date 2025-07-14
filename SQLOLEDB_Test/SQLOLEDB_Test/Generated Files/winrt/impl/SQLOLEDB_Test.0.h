@@ -10,27 +10,19 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Markup
 WINRT_EXPORT namespace winrt::SQLOLEDB_Test
 {
     struct IMainWindow;
-    struct IPersonViewModel;
     struct MainWindow;
-    struct PersonViewModel;
     struct XamlMetaDataProvider;
 }
 namespace winrt::impl
 {
     template <> struct category<winrt::SQLOLEDB_Test::IMainWindow>{ using type = interface_category; };
-    template <> struct category<winrt::SQLOLEDB_Test::IPersonViewModel>{ using type = interface_category; };
     template <> struct category<winrt::SQLOLEDB_Test::MainWindow>{ using type = class_category; };
-    template <> struct category<winrt::SQLOLEDB_Test::PersonViewModel>{ using type = class_category; };
     template <> struct category<winrt::SQLOLEDB_Test::XamlMetaDataProvider>{ using type = class_category; };
     template <> inline constexpr auto& name_v<winrt::SQLOLEDB_Test::MainWindow> = L"SQLOLEDB_Test.MainWindow";
-    template <> inline constexpr auto& name_v<winrt::SQLOLEDB_Test::PersonViewModel> = L"SQLOLEDB_Test.PersonViewModel";
     template <> inline constexpr auto& name_v<winrt::SQLOLEDB_Test::XamlMetaDataProvider> = L"SQLOLEDB_Test.XamlMetaDataProvider";
     template <> inline constexpr auto& name_v<winrt::SQLOLEDB_Test::IMainWindow> = L"SQLOLEDB_Test.IMainWindow";
-    template <> inline constexpr auto& name_v<winrt::SQLOLEDB_Test::IPersonViewModel> = L"SQLOLEDB_Test.IPersonViewModel";
     template <> inline constexpr guid guid_v<winrt::SQLOLEDB_Test::IMainWindow>{ 0x5B5BA667,0xC59D,0x5800,{ 0xAD,0x26,0x2C,0x29,0x4A,0x33,0x8F,0x31 } }; // 5B5BA667-C59D-5800-AD26-2C294A338F31
-    template <> inline constexpr guid guid_v<winrt::SQLOLEDB_Test::IPersonViewModel>{ 0xF561FBC1,0x9545,0x53F2,{ 0xBD,0x35,0xA6,0x07,0x9C,0x2C,0xF3,0x38 } }; // F561FBC1-9545-53F2-BD35-A6079C2CF338
     template <> struct default_interface<winrt::SQLOLEDB_Test::MainWindow>{ using type = winrt::SQLOLEDB_Test::IMainWindow; };
-    template <> struct default_interface<winrt::SQLOLEDB_Test::PersonViewModel>{ using type = winrt::SQLOLEDB_Test::IPersonViewModel; };
     template <> struct default_interface<winrt::SQLOLEDB_Test::XamlMetaDataProvider>{ using type = winrt::Microsoft::UI::Xaml::Markup::IXamlMetadataProvider; };
     template <> struct abi<winrt::SQLOLEDB_Test::IMainWindow>
     {
@@ -38,18 +30,6 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_MyProperty(int32_t*) noexcept = 0;
             virtual int32_t __stdcall put_MyProperty(int32_t) noexcept = 0;
-        };
-    };
-    template <> struct abi<winrt::SQLOLEDB_Test::IPersonViewModel>
-    {
-        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
-        {
-            virtual int32_t __stdcall get_BusinessEntityID(int32_t*) noexcept = 0;
-            virtual int32_t __stdcall put_BusinessEntityID(int32_t) noexcept = 0;
-            virtual int32_t __stdcall get_FirstName(void**) noexcept = 0;
-            virtual int32_t __stdcall put_FirstName(void*) noexcept = 0;
-            virtual int32_t __stdcall get_LastName(void**) noexcept = 0;
-            virtual int32_t __stdcall put_LastName(void*) noexcept = 0;
         };
     };
     template <typename D>
@@ -61,20 +41,6 @@ namespace winrt::impl
     template <> struct consume<winrt::SQLOLEDB_Test::IMainWindow>
     {
         template <typename D> using type = consume_SQLOLEDB_Test_IMainWindow<D>;
-    };
-    template <typename D>
-    struct consume_SQLOLEDB_Test_IPersonViewModel
-    {
-        [[nodiscard]] auto BusinessEntityID() const;
-        auto BusinessEntityID(int32_t value) const;
-        [[nodiscard]] auto FirstName() const;
-        auto FirstName(param::hstring const& value) const;
-        [[nodiscard]] auto LastName() const;
-        auto LastName(param::hstring const& value) const;
-    };
-    template <> struct consume<winrt::SQLOLEDB_Test::IPersonViewModel>
-    {
-        template <typename D> using type = consume_SQLOLEDB_Test_IPersonViewModel<D>;
     };
 }
 #endif

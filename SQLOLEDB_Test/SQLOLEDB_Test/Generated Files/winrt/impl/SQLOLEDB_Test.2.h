@@ -16,12 +16,6 @@ WINRT_EXPORT namespace winrt::SQLOLEDB_Test
         MainWindow(void* ptr, take_ownership_from_abi_t) noexcept : winrt::SQLOLEDB_Test::IMainWindow(ptr, take_ownership_from_abi) {}
         MainWindow();
     };
-    struct WINRT_IMPL_EMPTY_BASES PersonViewModel : winrt::SQLOLEDB_Test::IPersonViewModel
-    {
-        PersonViewModel(std::nullptr_t) noexcept {}
-        PersonViewModel(void* ptr, take_ownership_from_abi_t) noexcept : winrt::SQLOLEDB_Test::IPersonViewModel(ptr, take_ownership_from_abi) {}
-        PersonViewModel();
-    };
     struct WINRT_IMPL_EMPTY_BASES XamlMetaDataProvider : winrt::Microsoft::UI::Xaml::Markup::IXamlMetadataProvider
     {
         XamlMetaDataProvider(std::nullptr_t) noexcept {}

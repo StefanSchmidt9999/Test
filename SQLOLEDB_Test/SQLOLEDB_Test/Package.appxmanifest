@@ -8,11 +8,11 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="e2f07cf8-6e13-4420-852a-fcfa97ee2cf5"
+    Name="b93db41b-a2c9-463c-b7c3-210685e55122"
     Publisher="CN=StefanSchmidt"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="e2f07cf8-6e13-4420-852a-fcfa97ee2cf5" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="b93db41b-a2c9-463c-b7c3-210685e55122" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>SQLOLEDB_Test</DisplayName>

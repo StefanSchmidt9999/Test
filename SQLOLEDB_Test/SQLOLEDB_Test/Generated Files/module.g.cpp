@@ -3,7 +3,6 @@
 #include "pch.h"
 #include "winrt/base.h"
 void* winrt_make_SQLOLEDB_Test_MainWindow();
-void* winrt_make_SQLOLEDB_Test_PersonViewModel();
 void* winrt_make_SQLOLEDB_Test_XamlMetaDataProvider();
 
 bool __stdcall winrt_can_unload_now() noexcept
@@ -27,11 +26,6 @@ void* __stdcall winrt_get_activation_factory([[maybe_unused]] std::wstring_view 
     if (requal(name, L"SQLOLEDB_Test.MainWindow"))
     {
         return winrt_make_SQLOLEDB_Test_MainWindow();
-    }
-
-    if (requal(name, L"SQLOLEDB_Test.PersonViewModel"))
-    {
-        return winrt_make_SQLOLEDB_Test_PersonViewModel();
     }
 
     if (requal(name, L"SQLOLEDB_Test.XamlMetaDataProvider"))

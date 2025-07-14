@@ -13,12 +13,5 @@ WINRT_EXPORT namespace winrt::SQLOLEDB_Test
         IMainWindow(std::nullptr_t = nullptr) noexcept {}
         IMainWindow(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct WINRT_IMPL_EMPTY_BASES IPersonViewModel :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IPersonViewModel>
-    {
-        IPersonViewModel(std::nullptr_t = nullptr) noexcept {}
-        IPersonViewModel(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
 }
 #endif

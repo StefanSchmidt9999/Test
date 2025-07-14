@@ -45,108 +45,6 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->put_MyProperty(value));
         }
     }
-    template <typename D> auto consume_SQLOLEDB_Test_IPersonViewModel<D>::BusinessEntityID() const
-    {
-        int32_t value{};
-        if constexpr (!std::is_same_v<D, winrt::SQLOLEDB_Test::IPersonViewModel>)
-        {
-            winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::SQLOLEDB_Test::IPersonViewModel, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
-            check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::SQLOLEDB_Test::IPersonViewModel>**)&_winrt_casted_result;
-            check_hresult(_winrt_abi_type->get_BusinessEntityID(&value));
-        }
-        else
-        {
-            auto const _winrt_abi_type = *(abi_t<winrt::SQLOLEDB_Test::IPersonViewModel>**)this;
-            check_hresult(_winrt_abi_type->get_BusinessEntityID(&value));
-        }
-        return value;
-    }
-    template <typename D> auto consume_SQLOLEDB_Test_IPersonViewModel<D>::BusinessEntityID(int32_t value) const
-    {
-        if constexpr (!std::is_same_v<D, winrt::SQLOLEDB_Test::IPersonViewModel>)
-        {
-            winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::SQLOLEDB_Test::IPersonViewModel, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
-            check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::SQLOLEDB_Test::IPersonViewModel>**)&_winrt_casted_result;
-            check_hresult(_winrt_abi_type->put_BusinessEntityID(value));
-        }
-        else
-        {
-            auto const _winrt_abi_type = *(abi_t<winrt::SQLOLEDB_Test::IPersonViewModel>**)this;
-            check_hresult(_winrt_abi_type->put_BusinessEntityID(value));
-        }
-    }
-    template <typename D> auto consume_SQLOLEDB_Test_IPersonViewModel<D>::FirstName() const
-    {
-        void* value{};
-        if constexpr (!std::is_same_v<D, winrt::SQLOLEDB_Test::IPersonViewModel>)
-        {
-            winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::SQLOLEDB_Test::IPersonViewModel, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
-            check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::SQLOLEDB_Test::IPersonViewModel>**)&_winrt_casted_result;
-            check_hresult(_winrt_abi_type->get_FirstName(&value));
-        }
-        else
-        {
-            auto const _winrt_abi_type = *(abi_t<winrt::SQLOLEDB_Test::IPersonViewModel>**)this;
-            check_hresult(_winrt_abi_type->get_FirstName(&value));
-        }
-        return hstring{ value, take_ownership_from_abi };
-    }
-    template <typename D> auto consume_SQLOLEDB_Test_IPersonViewModel<D>::FirstName(param::hstring const& value) const
-    {
-        if constexpr (!std::is_same_v<D, winrt::SQLOLEDB_Test::IPersonViewModel>)
-        {
-            winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::SQLOLEDB_Test::IPersonViewModel, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
-            check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::SQLOLEDB_Test::IPersonViewModel>**)&_winrt_casted_result;
-            check_hresult(_winrt_abi_type->put_FirstName(*(void**)(&value)));
-        }
-        else
-        {
-            auto const _winrt_abi_type = *(abi_t<winrt::SQLOLEDB_Test::IPersonViewModel>**)this;
-            check_hresult(_winrt_abi_type->put_FirstName(*(void**)(&value)));
-        }
-    }
-    template <typename D> auto consume_SQLOLEDB_Test_IPersonViewModel<D>::LastName() const
-    {
-        void* value{};
-        if constexpr (!std::is_same_v<D, winrt::SQLOLEDB_Test::IPersonViewModel>)
-        {
-            winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::SQLOLEDB_Test::IPersonViewModel, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
-            check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::SQLOLEDB_Test::IPersonViewModel>**)&_winrt_casted_result;
-            check_hresult(_winrt_abi_type->get_LastName(&value));
-        }
-        else
-        {
-            auto const _winrt_abi_type = *(abi_t<winrt::SQLOLEDB_Test::IPersonViewModel>**)this;
-            check_hresult(_winrt_abi_type->get_LastName(&value));
-        }
-        return hstring{ value, take_ownership_from_abi };
-    }
-    template <typename D> auto consume_SQLOLEDB_Test_IPersonViewModel<D>::LastName(param::hstring const& value) const
-    {
-        if constexpr (!std::is_same_v<D, winrt::SQLOLEDB_Test::IPersonViewModel>)
-        {
-            winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::SQLOLEDB_Test::IPersonViewModel, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
-            check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::SQLOLEDB_Test::IPersonViewModel>**)&_winrt_casted_result;
-            check_hresult(_winrt_abi_type->put_LastName(*(void**)(&value)));
-        }
-        else
-        {
-            auto const _winrt_abi_type = *(abi_t<winrt::SQLOLEDB_Test::IPersonViewModel>**)this;
-            check_hresult(_winrt_abi_type->put_LastName(*(void**)(&value)));
-        }
-    }
     template <typename D>
     struct produce<D, winrt::SQLOLEDB_Test::IMainWindow> : produce_base<D, winrt::SQLOLEDB_Test::IMainWindow>
     {
@@ -165,54 +63,6 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
-    template <typename D>
-    struct produce<D, winrt::SQLOLEDB_Test::IPersonViewModel> : produce_base<D, winrt::SQLOLEDB_Test::IPersonViewModel>
-    {
-        int32_t __stdcall get_BusinessEntityID(int32_t* value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<int32_t>(this->shim().BusinessEntityID());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall put_BusinessEntityID(int32_t value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().BusinessEntityID(value);
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall get_FirstName(void** value) noexcept final try
-        {
-            clear_abi(value);
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<hstring>(this->shim().FirstName());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall put_FirstName(void* value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().FirstName(*reinterpret_cast<hstring const*>(&value));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall get_LastName(void** value) noexcept final try
-        {
-            clear_abi(value);
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<hstring>(this->shim().LastName());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall put_LastName(void* value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().LastName(*reinterpret_cast<hstring const*>(&value));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-    };
 }
 WINRT_EXPORT namespace winrt::SQLOLEDB_Test
 {
@@ -221,9 +71,7 @@ namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::SQLOLEDB_Test::IMainWindow> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::SQLOLEDB_Test::IPersonViewModel> : winrt::impl::hash_base {};
     template<> struct hash<winrt::SQLOLEDB_Test::MainWindow> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::SQLOLEDB_Test::PersonViewModel> : winrt::impl::hash_base {};
     template<> struct hash<winrt::SQLOLEDB_Test::XamlMetaDataProvider> : winrt::impl::hash_base {};
 #endif
 #ifdef __cpp_lib_format
