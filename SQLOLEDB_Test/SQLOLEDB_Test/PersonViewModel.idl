@@ -1,0 +1,12 @@
+//import "oaidl.idl";
+//import "ocidl.idl";
+namespace SQLOLEDB_Test
+{
+    runtimeclass PersonViewModel
+    {
+        PersonViewModel();
+        Int32 BusinessEntityID;
+        String FirstName;
+        String LastName;
+    }
+}

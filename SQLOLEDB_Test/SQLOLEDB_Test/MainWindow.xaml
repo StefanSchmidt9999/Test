@@ -9,7 +9,18 @@
     mc:Ignorable="d"
     Title="SQLOLEDB_Test">
 
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <Button Content="SQL Abfrage" Click="OnSqlQueryClicked" Margin="10"/>
+        <ListView x:Name="PersonListView" Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:PersonViewModel">
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <TextBlock Text="{x:Bind BusinessEntityID}" Width="80"/>
+                        <TextBlock Text="{x:Bind FirstName}" Width="150"/>
+                        <TextBlock Text="{x:Bind LastName}" Width="150"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
 </Window>

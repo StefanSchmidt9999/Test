@@ -6,14 +6,11 @@ namespace winrt::SQLOLEDB_Test::implementation
 {
     struct MainWindow : MainWindowT<MainWindow>
     {
-        MainWindow()
-        {
-            // Xaml objects should not call InitializeComponent during construction.
-            // See https://github.com/microsoft/cppwinrt/tree/master/nuget#initializecomponent
-        }
-
+        MainWindow();
+        
         int32_t MyProperty();
         void MyProperty(int32_t value);
+        void winrt::SQLOLEDB_Test::implementation::MainWindow::OnSqlQueryClicked(winrt::Windows::Foundation::IInspectable const&, winrt::Microsoft::UI::Xaml::RoutedEventArgs const&);
     };
 }
 
